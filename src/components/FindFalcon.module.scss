@@ -1,0 +1,19 @@
+.container {
+  &__content {
+    padding-top: 1rem;
+    &__select {
+      // padding-bottom: 2rem;
+    }
+    &__button {
+      margin: auto;
+      margin-top: 2rem;
+    }
+  }
+}
+.site-card-border-less-wrapper {
+  padding: 30px;
+  background: #ececec;
+  div {
+    margin: auto;
+  }
+}

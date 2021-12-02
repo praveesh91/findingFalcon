@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Layout } from "antd";
+import RouterOutlet from "./routes.js";
+
+import { BrowserRouter as Router } from "react-router-dom";
+import HeaderSection from "./components/HeaderSection";
+
+const { Content, Footer } = Layout;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Layout className="layout">
+          <HeaderSection />
+          <Content style={{ padding: "0 50px" }}>
+            <div className="site-layout-content">
+              <RouterOutlet />
+            </div>
+          </Content>
+          <Footer style={{ textAlign: "center" }}>
+            Coding problem - www.geektrust.in/finding-falcone
+          </Footer>
+        </Layout>
+      </Router>
     </div>
   );
 }
