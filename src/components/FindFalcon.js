@@ -169,6 +169,7 @@ export const FindFalcon = () => {
                       { required: true, message: "Please select a planet!" },
                     ]}>
                     <Select
+                      data-testid="select-input"
                       showSearch
                       onChange={onChangePlanet}
                       style={{ width: 200 }}
@@ -181,6 +182,7 @@ export const FindFalcon = () => {
                       }>
                       {planets.map((el) => (
                         <Option
+                          data-testid="select-input-options"
                           key={el.name}
                           disabled={data
                             .map((item) => item.planet)
