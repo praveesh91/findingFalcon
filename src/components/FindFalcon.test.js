@@ -25,35 +25,6 @@ describe("Falcon component", () => {
   });
 
   afterEach(cleanup);
-  test("fetches successfully data from an API", async () => {
-    const data = {
-      data: {
-        hits: [
-          {
-            objectID: "1",
-            title: "a",
-          },
-          {
-            objectID: "2",
-            title: "b",
-          },
-        ],
-      },
-    };
-    axios.get.mockImplementationOnce(() => Promise.resolve(data));
-    // await expect(fetchData("react")).resolves.toEqual(data);
-    // expect(axios.get).toHaveBeenCalledWith(
-    //   `https://findfalcone.herokuapp.com/planets`
-    // );
-    // expect(axios.get).toHaveBeenCalledWith(
-    //   `https://findfalcone.herokuapp.com/vehicles`
-    // );
-  });
-  test("fetches erroneously data from an API", async () => {
-    const errorMessage = "Network Error";
-
-    axios.get.mockImplementationOnce(() =>
-      Promise.reject(new Error(errorMessage))
-    );
-  });
+  test("fetches successfully data from an API", async () => {});
+  test("fetches erroneously data from an API", async () => {});
 });
