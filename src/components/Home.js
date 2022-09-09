@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Col, Row, Steps } from "antd";
+import { Card, Steps } from "antd";
 import {
   UserOutlined,
   SolutionOutlined,
