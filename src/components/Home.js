@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row, Steps } from "antd";
+import { Card, Col, Row, Steps } from "antd";
 import {
   UserOutlined,
   SolutionOutlined,
@@ -11,30 +11,28 @@ const { Step } = Steps;
 
 const Home = () => {
   return (
-    <div style={{ padding: "3rem 1rem 1rem 1rem" }}>
-      <Row>
-        <Col md={24}>
-          <Steps responsive>
-            <Step status="finish" title="Goto find " icon={<UserOutlined />} />
-            <Step
-              status="finish"
-              title="Select planets"
-              icon={<SolutionOutlined />}
-            />
-            <Step
-              status="finish"
-              title="Select Vehicles"
-              icon={<SolutionOutlined />}
-            />
-            <Step
-              status="process"
-              title="Click find falcon"
-              icon={<LoadingOutlined />}
-            />
-            <Step status="finish" title="Done" icon={<SmileOutlined />} />
-          </Steps>
-        </Col>
-      </Row>
+    <div style={{ paddingTop: "4rem" }}>
+      <Card title={"Follow the instructions to find your Falcon"}>
+        <Steps responsive>
+          <Step status="finish" title="Goto find " icon={<UserOutlined />} />
+          <Step
+            status="finish"
+            title="Select planets"
+            icon={<SolutionOutlined />}
+          />
+          <Step
+            status="finish"
+            title="Select Vehicles"
+            icon={<SolutionOutlined />}
+          />
+          <Step
+            status="process"
+            title="Click find falcon"
+            icon={<LoadingOutlined />}
+          />
+          <Step status="finish" title="Done" icon={<SmileOutlined />} />
+        </Steps>
+      </Card>
     </div>
   );
 };
